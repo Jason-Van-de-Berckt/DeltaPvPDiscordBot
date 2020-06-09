@@ -52,11 +52,11 @@ client.on("message", async message => {
         .setTitle("Help")
         .setDescription("Hieronder vind je alle commando's.")
         .addFields(
-            {name: prefix + "help", value: "Laat alle commando's zien en vertelt wat ze doen."}, //?help
-            {name: prefix + "test", value: "Test of de bot online is."}, //?test
-            {name: prefix + "alert", value: "Laat een mededeling zien. ?alert [Titel] [bericht]. Voorbeeld: ?alert Mededeling Dit is een voorbeeldmededeling. Je moet voor dit commando de rol 「L」Lead Team hebben."}, //?alert
-            {name: prefix + "poll", value: "Maak een poll. ?poll [naam-(aan-elkaar)] [antwoord-1-(aan-elkaar)] [antwoord-2-(aan-elkaar)] [Extra info en vraag]. Voorbeeld: ?poll Test? Ja Nee Is dit een test?"}, //?poll
-            {name: prefix + "tickethelp", value: "Voor meer info over tickets, doe ?tickethelp"} //?tickethelp
+            {name: prefix + "help", value: "Laat alle commando's zien en vertelt wat ze doen."}, //.help
+            {name: prefix + "test", value: "Laat zien of de bot online is"}, //.test
+            {name: prefix + "alert", value: "Laat een mededeling zien. ?alert Titel - bericht. [Voorbeeld: .alert Mededeling Dit is een voorbeeldmededeling.] LET OP je moet voor dit commando de rol 「L」Lead Team hebben!!!"}, //.alert
+            {name: prefix + "poll", value: "Maak een poll. ?poll Naam (aan-elkaar) - Antwoord 1 (aan-elkaar) - Antwoord 2 (aan-elkaar) - Extra info of vraag. [Voorbeeld: .poll Test? Ja Nee Is dit een test?]"}, //.poll
+            {name: prefix + "tickethelp", value: "Voor meer info over tickets, doe ?tickethelp"} //.tickethelp
         )
         .setFooter("Copyright 2020")
         .setColor("#00ffe1");
@@ -119,7 +119,7 @@ client.on("message", async message => {
                 if(channel.name == userName.toLowerCase() + "-" + userDiscriminator){
                     ticketExist = true;
 
-                    message.channel.send("Je hebt al een ticket aangemaakt. Zie je hem niet staan? Spreek dan even de staff aan.")
+                    message.channel.send("Je kan maar 1 ticket aanmaken. Zie je hem niet staan? Spreek dan even de staff aan.")
 
                     return;
                 }
