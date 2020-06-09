@@ -26,7 +26,7 @@ client.on("message", async message => {
     }
 
     else if(command === `${prefix}alert`){
-        if(message.member.roles.cache.some(role => role.name === '「L」Lead Team')){
+        if(message.member.roles.cache.some(role => role.name === '🔰 » Lead Team')){
             message.delete();
             
             msg = messageArray.slice(2).join(' ');
@@ -54,9 +54,10 @@ client.on("message", async message => {
         .addFields(
             {name: prefix + "help", value: "Laat alle commando's zien en vertelt wat ze doen."}, //.help
             {name: prefix + "test", value: "Laat zien of de bot online is"}, //.test
-            {name: prefix + "alert", value: "Laat een mededeling zien. ?alert Titel - bericht. [Voorbeeld: .alert Mededeling Dit is een voorbeeldmededeling.] LET OP je moet voor dit commando de rol 「L」Lead Team hebben!!!"}, //.alert
+            {name: prefix + "alert", value: "Laat een mededeling zien. ?alert Titel - bericht. [Voorbeeld: .alert Mededeling Dit is een voorbeeldmededeling.] LET OP je moet voor dit commando de rol 🔰 » Lead Team hebben!!!"}, //.alert
             {name: prefix + "poll", value: "Maak een poll. ?poll Naam (aan-elkaar) - Antwoord 1 (aan-elkaar) - Antwoord 2 (aan-elkaar) - Extra info of vraag. [Voorbeeld: .poll Test? Ja Nee Is dit een test?]"}, //.poll
             {name: prefix + "tickethelp", value: "Voor meer info over tickets, doe ?tickethelp"} //.tickethelp
+            {name: prefix + "giveaway", value "Maak hier een giveaway met .giveaway"} //.giveaway
         )
         .setFooter("Copyright 2020")
         .setColor("#00ffe1");
@@ -88,7 +89,7 @@ client.on("message", async message => {
         }
     else if(command === `${prefix}giveaway`)
         {
-            if(message.member.roles.cache.some(role => role.name === '「L」Lead Team')){
+            if(message.member.roles.cache.some(role => role.name === '🔰 » Lead Team')){
                 let timev = message.content.slice(client.prefix.length+9)
                 if(!timev) return message.channel.send('Je hebt geen tijd meegegeven.')
                 let time = parseInt(timev,10)
