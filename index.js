@@ -57,7 +57,7 @@ client.on("message", async message => {
             {name: prefix + "alert", value: "Laat een mededeling zien. ?alert Titel - bericht. [Voorbeeld: .alert Mededeling Dit is een voorbeeldmededeling.] LET OP je moet voor dit commando de rol 🔰 » Lead Team hebben!!!"}, //.alert
             {name: prefix + "poll", value: "Maak een poll. ?poll Naam (aan-elkaar) - Antwoord 1 (aan-elkaar) - Antwoord 2 (aan-elkaar) - Extra info of vraag. [Voorbeeld: .poll Test? Ja Nee Is dit een test?]"}, //.poll
             {name: prefix + "tickethelp", value: "Voor meer info over tickets, doe ?tickethelp"} //.tickethelp
-            {name: prefix + "giveaway", value "Maak hier een giveaway met .giveaway"} //.giveaway
+            {name: prefix + "giveaway", value "Maak hier een giveaway met .giveaway"}, //.giveaway
         )
         .setFooter("Copyright 2020")
         .setColor("#00ffe1");
